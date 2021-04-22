@@ -1,0 +1,25 @@
+{
+  "name": "yelp_campground",
+  "version": "1.0.0",
+  "description": "This project is implement basic campground web application",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youn0808/yelp_campground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youn0808/yelp_campground/issues"
+  },
+  "homepage": "https://github.com/youn0808/yelp_campground#readme"
+}
