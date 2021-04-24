@@ -1,20 +1,47 @@
 <% layout('layouts/boilerplate')%>
     <!-- this form is going to /campgrounds (web site ) -->
     <!-- Form only send a GET or POST request from the browswer so we can fake a PUT  -->
-    <form action="/campgrounds" method="POST">
-    <div>
-        <label for="tittle">tittle</label>
-        <input type="text" id = "tittle" name="campground[tittle]">
+    
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="POST">
+            <div class = "mb-3">
+                <label class = "form-label" for="tittle">tittle</label>
+                <input class = "form-control" type="text" id = "tittle" name="campground[tittle]">
+            </div>
+        
+            <div class = "mb-3" >
+                <label class = "form-label" for="location">location</label>
+                <input class = "form-control" type="text" id = "location" name="campground[location]">
+            </div>
+
+            <div class = "mb-3" >
+                <label class = "form-label" for="imgURL">Img URL</label>
+                <input class = "form-control" type="text" id = "imgURL" name="campground[image]">
+            </div>
+
+            <div class="mb-3">
+                <label class = "form-label" for="price">Campground Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control"id = "price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]">
+            </div>
+
+
+
+            <div class = "mb-3" >
+                <label class = "form-label" for="description">description</label>
+                <textarea class = "form-control" type="text" id = "description" name="campground[description]"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <button class = "btn btn-info">Submit</button>
+            </div>
+        </form>
+        <a href="/campgrounds">All campgound</a>
     </div>
+</div>
 
-    <div>
-        <label for="location">location</label>
-        <input type="text" id = "location" name="campground[location]">
-    </div>
-
-    <button>Submit</button>
-
-</form>
-<a href="/campgrounds">All campgound</a>
 
     

@@ -1,18 +1,42 @@
 <% layout('layouts/boilerplate')%>
-    <h1>Edit</h1>
-    <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
-        <div>
-            <label for="tittle">Edit tittle</label>
-            <input type="text" id = "tittle" name="campground[tittle]" value ="<%= campground.tittle  %> " >
-        </div>
-    
-        <div>
-            <label for="location">Edit location</label>
-            <input type="text" id = "location" name="campground[location]" value ="<%= campground.location  %> "  >
-        </div>
-    
-        <button>Update Campground</button>
-    
-    </form>
+
+<div class="row">
+    <h1 class="text-center">Edit Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+            <div class = "mb-3">
+                <label class = "form-label" for="tittle">tittle</label>
+                <input class = "form-control" type="text" id = "tittle" name="campground[tittle]" value ="<%= campground.tittle  %>">
+            </div>
+        
+            <div class = "mb-3" >
+                <label class = "form-label" for="location">location</label>
+                <input class = "form-control" type="text" id = "location" name="campground[location]" value ="<%= campground.location  %>">
+            </div>
+
+            <div class = "mb-3" >
+                <label class = "form-label" for="imgURL">Img URL</label>
+                <input class = "form-control" type="text" id = "imgURL" name="campground[image]" value ="<%= campground.image  %>">
+            </div>
+
+            <div class="mb-3">
+                <label class = "form-label" for="price">Campground Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control"id = "price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]" value ="<%= campground.price  %>">
+            </div>
+
+            <div class = "mb-3" >
+                <label class = "form-label" for="description">description</label>
+                <textarea class = "form-control" type="text" id = "description" name="campground[description]"><%=campground.description%></textarea>
+            </div>
+            <div class="mb-3">
+                <button class = "btn btn-info">Update</button>
+            </div>
+        </form>
+        <a href="/campgrounds">All campgound</a>
+    </div>
+</div>
+
 
     <a href="/campgrounds/<%=campground._id%>">Back to campground</a>
